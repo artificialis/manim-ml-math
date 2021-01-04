@@ -1,6 +1,7 @@
 
 from manimlib.imports import *
 
+
 class Shapes(Scene):
 
     # Construct the scene
@@ -18,10 +19,13 @@ class Shapes(Scene):
         )
 
         # Showing shapes
+        self.wait(3)
         self.play(ShowCreation(circle))
         self.play(FadeOut(circle))
         self.play(GrowFromCenter(square))
         self.play(Transform(square, triangle))
+        self.play(FadeOut(triangle))
+        self.wait(3)
     # end construct
 
 # end Shapes
